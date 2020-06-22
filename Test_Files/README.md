@@ -19,8 +19,16 @@ If you do not see this option, you will need to try and reinstall the source cod
 # Installing PyBullet 
 pybullet is a simple python interface to the physics engine "Bullet", this allows you to import robots into a simulator and controll them. pybullet can load kinematic descriptions of robots or other objects from URDF files.
 
-pip install pybullet
-follow this guide https://alexanderfabisch.github.io/pybullet.html and/or run the test_pybullet_install.py to make sure 
+- pip install pybullet
+
+reference https://alexanderfabisch.github.io/pybullet.html 
+
+
+# Run test scripts
+python bullet_test.py
+python test_position_controller.py
+python test_velocity_controller.py
+
 
 
 # Modeling your own robot in Solidworks
