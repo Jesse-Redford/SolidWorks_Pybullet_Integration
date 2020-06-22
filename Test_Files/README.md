@@ -30,6 +30,23 @@ python test_position_controller.py
 python test_velocity_controller.py
 
 
+# python bullet_test.py
+![Policy Guidance For Accelerated Training](https://github.com/Jesse-Redford/Deep_Turtles/blob/master/G_Policy.gif?raw=true)
+
+
+# python test_position_controller.py
+![Policy Guidance For Accelerated Training](https://github.com/Jesse-Redford/Deep_Turtles/blob/master/G_Policy.gif?raw=true)
+
+
+# python test_velocity_controller.py
+![Policy Guidance For Accelerated Training](https://github.com/Jesse-Redford/Deep_Turtles/blob/master/G_Policy.gif?raw=true)
+
+
+# Example of exporting URDF file from solidworks, how I created (Assem_test8 folder)
+![Policy Guidance For Accelerated Training](https://github.com/Jesse-Redford/Deep_Turtles/blob/master/G_Policy.gif?raw=true)
+
+
+
 
 # Modeling your own robot in Solidworks
 
