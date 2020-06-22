@@ -31,7 +31,6 @@ python test_velocity_controller.py
 # Example of exporting URDF file from solidworks, how I created (Assem_test8 folder)
 ![Exporting URDF file](https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/creating_URDF_file.gif?raw=true)
 
-
 # python test_position_controller.py
 ![python test_position_controller.py](https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_position_controller.gif?raw=true)
 
