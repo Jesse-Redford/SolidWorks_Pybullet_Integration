@@ -21,29 +21,21 @@ pybullet is a simple python interface to the physics engine "Bullet", this allow
 
 - pip install pybullet
 
-reference https://alexanderfabisch.github.io/pybullet.html 
-
 
 # Run test scripts
-python bullet_test.py
+python bullet_test.py - reference https://alexanderfabisch.github.io/pybullet.html 
 python test_position_controller.py
 python test_velocity_controller.py
 
 
-# python bullet_test.py
-![Policy Guidance For Accelerated Training](https://github.com/Jesse-Redford/Deep_Turtles/blob/master/G_Policy.gif?raw=true)
-
+# Example of exporting URDF file from solidworks, how I created (Assem_test8 folder)
+![Exporting URDF file]https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/creating_URDF_file.gif?raw=true
 
 # python test_position_controller.py
-![Policy Guidance For Accelerated Training](https://github.com/Jesse-Redford/Deep_Turtles/blob/master/G_Policy.gif?raw=true)
-
+![python test_position_controller.py]https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_position_controller.gif?raw=true
 
 # python test_velocity_controller.py
-![Policy Guidance For Accelerated Training](https://github.com/Jesse-Redford/Deep_Turtles/blob/master/G_Policy.gif?raw=true)
-
-
-# Example of exporting URDF file from solidworks, how I created (Assem_test8 folder)
-![Policy Guidance For Accelerated Training](https://github.com/Jesse-Redford/Deep_Turtles/blob/master/G_Policy.gif?raw=true)
+![python test_velocity_controller.py]https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_velocity_controller.gif?raw=true
 
 
 
