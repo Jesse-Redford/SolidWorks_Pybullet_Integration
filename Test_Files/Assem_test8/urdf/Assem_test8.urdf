@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.4.4-24-g24328f6  Build Version: 1.5.7084.36479
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assem_test8">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.1955E-19 0.00010834 0.072357"
+        rpy="0 0 0" />
+      <mass
+        value="0.9643" />
+      <inertia
+        ixx="0.0044331"
+        ixy="-3.894E-21"
+        ixz="-1.7199E-20"
+        iyy="0.0044524"
+        iyz="-1.144E-05"
+        izz="0.0011149" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem_test8/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem_test8/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="arm">
+    <inertial>
+      <origin
+        xyz="0.16597 0.053505 -1.9429E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.19992" />
+      <inertia
+        ixx="4.6655E-05"
+        ixy="-0.00013781"
+        ixz="4.4037E-18"
+        iyy="0.0032199"
+        iyz="1.9297E-19"
+        izz="0.0032364" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem_test8/meshes/arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem_test8/meshes/arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.022595 0.19765"
+      rpy="0 -0.039919 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm" />
+    <axis
+      xyz="0 1 0" />
+    <safety_controller
+      k_velocity="0" />
+  </joint>
+</robot>
