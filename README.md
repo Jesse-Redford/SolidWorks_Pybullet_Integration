@@ -122,26 +122,26 @@ A development guide for building custom robot assemblies in Solidworks, converti
 ### Activating your Joint Controllers as a GUI gooey
 - Next lets create functions which will active the controllers we just made while the simulation is running. The functions will accept the variable defined above ie: Joint1_PC and Joint1_VC, and create a sidebar slider on the pybullet GUI which we can use to control the robots joint. The function will return the joints current position and velocity. 
 
-    def activate_position_controller(joint_parameters):
-        joint_index = joint_parameters[0]
-       angle = joint_parameters[1]
-       user_angle = pybullet.readUserDebugParameter(angle)
-       pybullet.setJointMotorControl2(robot, joint_index, pybullet.POSITION_CONTROL,targetPosition= user_angle)
-       joint_info = pybullet.getJointState(robot,joint_index)
-       joint_position = joint_info[0] 
-       joint_velosity = joint_info[1]
-       return joint_position,joint_velosity
+      def activate_position_controller(joint_parameters):
+             joint_index = joint_parameters[0]
+            angle = joint_parameters[1]
+            user_angle = pybullet.readUserDebugParameter(angle)
+            pybullet.setJointMotorControl2(robot, joint_index, pybullet.POSITION_CONTROL,targetPosition= user_angle)
+            joint_info = pybullet.getJointState(robot,joint_index)
+            joint_position = joint_info[0] 
+            joint_velosity = joint_info[1]
+            return joint_position,joint_velosity
 
 
-    def activate_velocity_controller(joint_parameters):
-       joint_index = joint_parameters[0]
-       velosity = joint_parameters[1]
-       user_velocity = pybullet.readUserDebugParameter(velosity)
-       pybullet.setJointMotorControl2(robot, joint_index, pybullet.VELOCITY_CONTROL,targetVelocity= user_velocity)
-       joint_info = pybullet.getJointState(robot,joint_index)
-       joint_position = joint_info[0] 
-       joint_velosity = joint_info[1]
-       return joint_position,joint_velosity
+      def activate_velocity_controller(joint_parameters):
+             joint_index = joint_parameters[0]
+            velosity = joint_parameters[1]
+            user_velocity = pybullet.readUserDebugParameter(velosity)
+            pybullet.setJointMotorControl2(robot, joint_index, pybullet.VELOCITY_CONTROL,targetVelocity= user_velocity)
+            joint_info = pybullet.getJointState(robot,joint_index)
+            joint_position = joint_info[0] 
+            joint_velosity = joint_info[1]
+            return joint_position,joint_velosity
 
 - Now lets test the postion/velocity controllers, by starting a simulation and testing each of them.
     
