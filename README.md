@@ -5,17 +5,17 @@ A development guide for building custom robot assemblies in Solidworks, importin
 
 ### Installing URDF exporter for Solidworks, Windows 10
 
-  1 Assuming you already have solidworks verison 2016 or greater already installed, click on the link below
+  1. Assuming you already have solidworks verison 2016 or greater already installed, click on the link below
     - https://github.com/ros/solidworks_urdf_exporter/releases/tag/1.5.1
 
-  2 Download the Source Code (zip) file
+  2. Download the Source Code (zip) file
     - https://github.com/ros/solidworks_urdf_exporter/archive/1.5.1.zip
 
-  3 Once downloaded unzip the folder and navigate to  --> solidworks_urdf_exporter-1.5.1 --> INSTALL --> Output
+  3. Once downloaded unzip the folder and navigate to  --> solidworks_urdf_exporter-1.5.1 --> INSTALL --> Output
   
-  4 In the Output folder you should see the file sw2urdfSetup.exe, double click to install it.
+  4. In the Output folder you should see the file sw2urdfSetup.exe, double click to install it.
 
-  5 After installing open solidworks and create a new partfile, click the file tab and scroll down, you should see an option (Export as URDF). If you do not see this option, you will need to try and reinstall the source code.
+  5. After installing open solidworks and create a new partfile, click the file tab and scroll down, you should see an option (Export as URDF). If you do not see this option, you will need to try and reinstall the source code.
 
 
 # Installing PyBullet 
