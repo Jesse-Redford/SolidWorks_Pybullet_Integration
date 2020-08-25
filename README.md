@@ -1,8 +1,8 @@
 # Solidworks Integration with Pybullet 
-A development guide for building custom robot assemblies in Solidworks, converting them to URDF, importing to pybullet environment, and setting up position and speed controllers. To get started I recommend downloading the Test_Files folder. This includes a simple solidworks model and the urdf I will be referencing for this tutorial. It is also assumed that you have solidoworks and python installed on your machine. 
+A development guide for building custom robot assemblies in Solidworks, converting them to URDF, importing to pybullet environment, and setting up position and speed controllers. To get started I recommend downloading the Test_Files folder and creating a python script to copy and paste code into. The Test_Files folder includes the solidworks models, urdf, and python files I will be referencing throughout this tutorial. It is also assumed that you have solidoworks and python installed on your machine. 
 
-### Topics
-- creating robot assemblies in Solidworks
+### Topics 
+- modeling robot assemblies in Solidworks
 - converting solidworks assembly to URDF
 - importing URDF into pybullet enviroment
 - Setting up GUI and configuring pybullet parameters
@@ -89,7 +89,7 @@ A development guide for building custom robot assemblies in Solidworks, converti
  
       get_joint_info(robot)
       
-#### Creating Positional Joint Controllers 
+### Creating Positional Joint Controllers 
 - Lets first create a position controller for one of the systems joints. The inputs to the function will be the joint_index of the joint we wish to create the controller for, followed by an upper/lower position limit in radians, and an inital position we want the joint to start in when we run the simulation.
 
        def create_joint_position_controller(joint_index=0,lower_limit=-3.14,upper_limit=3.14,inital_position=0):
@@ -101,7 +101,7 @@ A development guide for building custom robot assemblies in Solidworks, converti
            # pass the returned array to activate_position_contoller in the main loop of your script
            return [ joint_index,joint_parameters]
        
-#### Creating Velocity Joint Controllers        
+### Creating Velocity Joint Controllers        
 - Next we will create a velosity controller for the same joint, The inputs to the function will be the joint_index of the joint we wish to create the controller for, followed by an upper/lower velosity limit in radians/sec, and an inital velocity we want the joint to have a the start of the simulation.
        
       def create_joint_velocity_controller(joint_index=0,lower_limit=-10,upper_limit=10,inital_velosity=0):
@@ -142,8 +142,10 @@ A development guide for building custom robot assemblies in Solidworks, converti
             joint_position = joint_info[0] 
             joint_velosity = joint_info[1]
             return joint_position,joint_velosity
-
-- Now lets test the postion/velocity controllers, by starting a simulation and testing each of them.
+            
+            
+### Running Simulation 
+- Now lets test the postion/velocity controllers, by starting a simulation and testing each of them. Add the code below to your script. 
     
       while True:
     
@@ -161,7 +163,6 @@ A development guide for building custom robot assemblies in Solidworks, converti
       pybullet.stepSimulation()
     
       pybullet.disconnect()
-    
     
 
 ### Wrapping Up
