@@ -33,10 +33,11 @@ A development guide for building custom robot assemblies in Solidworks, converti
 
 ### Modeling your own robot in Solidworks
 - Assuming you have some basic knowledge of creating parts and assemblies in solidworks, a simple work flow for creating your robot should look something like the steps listed below. If you need help learning how to create solidworks model, additional information can be found here.
-      1. Create seperate part files for each major component of your robot.
-      2. Create an assembly file.
-      3. Import you part files into the assembly.
-      4. Construct your robot assembly by assign mates to each part .
+
+     1. Create seperate part files for each major component of your robot.
+     2. Create an assembly file.
+     3. Import you part files into the assembly.
+     4. Construct your robot assembly by assign mates to each part .
  
 
 
