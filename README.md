@@ -48,7 +48,7 @@ A development guide for building custom robot assemblies in Solidworks, converti
   6. Locate your model directory 
 
 <p align="center">
-<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/creating_URDF_file.gif" width="450" height="450"> 
+<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/creating_URDF_file.gif" width="1000" height="450"> 
 </p>
 
 ### Importing URDF file into PyBullet Enviroment
