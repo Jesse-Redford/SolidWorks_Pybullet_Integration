@@ -37,7 +37,8 @@ A development guide for building custom robot assemblies in Solidworks, converti
      1. Create seperate part files for each major component of your robot.
      2. Create an assembly file.
      3. Import you part files into the assembly.
-     4. Construct your robot assembly by assign mates to each part .
+     4. Define refference geometries for each part (ie joint axises and planes)
+     5. Construct your robot assembly by assign mates to your geometery references for each part .
  
 
 
