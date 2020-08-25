@@ -28,10 +28,8 @@ A development guide for building custom robot assemblies in Solidworks, converti
 
   5. After installing open solidworks and create a new partfile, click the file tab and scroll down, you should see an option (Export as URDF). If you do not see this option, you will need to try and reinstall the source code.
   
-
-
 ### Modeling your own robot in Solidworks
-- Assuming you have some basic knowledge of creating parts and assemblies in solidworks, a simple work flow for creating your robot should look something like the steps listed below. If you need help learning how to create solidworks model, additional information can be found here. 
+- Assuming you have some basic knowledge of creating parts and assemblies in solidworks, a simple work flow for creating your robot should look something like the steps listed below. I also included the solidworks parts/assmbly files in the Test folder. (Assem_model.SLDASM arm.SLDPRT base.SLDPRT).
 
      1. Create seperate part files for each major component of your robot.
      2. Create an assembly file.
@@ -39,8 +37,6 @@ A development guide for building custom robot assemblies in Solidworks, converti
      4. Define refference geometries for each part (ie joint axises and planes)
      5. Construct your robot assembly by assign mates to your geometery references for each part .
  
-
-
 ### Exporting your Solidworks Assembly as a URDF file.
 - Once you have created your robot parts and joined them in an assemblie file, we need to set up the parameters for the URDF file. Below is an example of what this processes looks like. how I created (Assem_test8 folder)
 
