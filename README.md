@@ -171,8 +171,8 @@ A development guide for building custom robot assemblies in Solidworks, converti
       - python test_velocity_controller.py
 
 <p align="center">
-<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_position_controller.gif" width="250" height="250"> 
-<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_velocity_controller.gif" width="250" height="250"> 
+<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_position_controller.gif" width="500" height="250"> 
+<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_velocity_controller.gif" width="500" height="250"> 
 </p>
 
 
@@ -181,7 +181,7 @@ A development guide for building custom robot assemblies in Solidworks, converti
 - Example of a real robot I designed in solidworks moving around in the pybullet enviroment. 
 
 <p align="center">
-<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Snakebot.gif" width="450" height="450"> 
+<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Snakebot.gif" width="500" height="500"> 
 </p>
 
 
