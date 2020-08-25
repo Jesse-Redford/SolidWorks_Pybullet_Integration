@@ -179,11 +179,11 @@ A development guide for building custom robot assemblies in Solidworks, converti
 
 
 
-#### Endless Posibilites
+### Endless Posibilites
 - Example of a real robot I designed in solidworks moving around in the pybullet enviroment. 
 
 <p align="center">
-<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Snakebot.gif" width="500" height="500"> 
+<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Snakebot.gif" width="1000" height="500"> 
 </p>
 
 
