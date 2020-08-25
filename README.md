@@ -9,18 +9,6 @@ A development guide for building custom robot assemblies in Solidworks, converti
 - retriving info about the URDF model
 - creating position and speed controlers for robot joints
 
-
-### Example what you will built in this tutortial
-- python bullet_test.py - reference https://alexanderfabisch.github.io/pybullet.html 
-- python test_position_controller.py
-- python test_velocity_controller.py
-
-<p align="center">
-<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_position_controller.gif" width="250" height="250"> 
-<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_velocity_controller.gif" width="250" height="250"> 
-</p>
-
-
 ### Installing PyBullet 
 - pybullet is a simple python interface to the physics engine "Bullet", this allows you to import robots into a simulator and controll them. pybullet can load kinematic descriptions of robots or other objects from URDF files.
 
@@ -43,7 +31,7 @@ A development guide for building custom robot assemblies in Solidworks, converti
 
 
 ### Modeling your own robot in Solidworks
-- Assuming you have some basic knowledge of creating parts and assemblies in solidworks, a simple work flow for creating your robot should look something like the steps listed below. If you need help learning how to create solidworks model, additional information can be found here.
+- Assuming you have some basic knowledge of creating parts and assemblies in solidworks, a simple work flow for creating your robot should look something like the steps listed below. If you need help learning how to create solidworks model, additional information can be found here. 
 
      1. Create seperate part files for each major component of your robot.
      2. Create an assembly file.
@@ -78,7 +66,9 @@ A development guide for building custom robot assemblies in Solidworks, converti
       pybullet.connect(pybullet.GUI)
       pybullet.resetSimulation()
       pybullet.setAdditionalSearchPath(pybullet_data.getDataPath())
-    
+      pybullet.setGravity(0, 0, -9.81) # define x,y,z gravity constants
+      pybullet.setTimeStep(0.0001)
+      
       # Load the URDF file of your robot.
       robot = pybullet.loadURDF(r'C:\Users\Jesse\Desktop\PyFluid\Assem_test8\urdf\Assem_test8.urdf',[0,0,0],useFixedBase=1)
     
@@ -103,11 +93,6 @@ A development guide for building custom robot assemblies in Solidworks, converti
  
       get_joint_info(robot)
       
-
-
-### Creating On Screen Joint Controllers 
-
-
 #### Creating Positional Joint Controllers 
 - Lets first create a position controller for one of the systems joints. The inputs to the function will be the joint_index of the joint we wish to create the controller for, followed by an upper/lower position limit in radians, and an inital position we want the joint to start in when we run the simulation.
 
@@ -132,16 +117,14 @@ A development guide for building custom robot assemblies in Solidworks, converti
          # pass this to activate_position_contoller
         return [ joint_index,joint_parameters]
 
+- Now create two variables to store the returned array from the functions above, I use "PC" to indicate Position Controll and "VC" to indicate a velosity controller.
 
-
-Now create two variables to store the returned array from the functions above, I use "PC" to indicate Position Controll and "VC" to indicate a velosity controller.
-
-    Joint1_PC = create_joint_position_controller(joint_index =0,lower_limit=-3.14,upper_limit=3.14,inital_position=0)
+      Joint1_PC = create_joint_position_controller(joint_index =0,lower_limit=-3.14,upper_limit=3.14,inital_position=0)
     
-    Joint1_VC = create_joint_velocity_controller(joint_index =0,lower_limit=-10,upper_limit=10,inital_velosity=0)
+      Joint1_VC = create_joint_velocity_controller(joint_index =0,lower_limit=-10,upper_limit=10,inital_velosity=0)
     
-### Creating On Screen Joint Controllers 
-Lets start controlling the robot joints by create functions which will active our controllers while the simulation is running. The functions will accept the variable defined above ie: Joint1_PC and Joint1_VC , and create a sidebar slider on the pybullet GUI which we can use to controll the robots joint. The function will then return the joints current position and velocity. 
+### Activating your Joint Controllers as a GUI gooey
+- Next lets create functions which will active the controllers we just made while the simulation is running. The functions will accept the variable defined above ie: Joint1_PC and Joint1_VC, and create a sidebar slider on the pybullet GUI which we can use to control the robots joint. The function will return the joints current position and velocity. 
 
     def activate_position_controller(joint_parameters):
         joint_index = joint_parameters[0]
@@ -164,36 +147,32 @@ Lets start controlling the robot joints by create functions which will active ou
        joint_velosity = joint_info[1]
        return joint_position,joint_velosity
 
-Now lets test the postion/velocity controllers, by starting a simulation and testing each of them.
+- Now lets test the postion/velocity controllers, by starting a simulation and testing each of them.
     
-     pybullet.setGravity(0, 0, -9.81) # define x,y,z gravity constants
-     pybullet.setTimeStep(0.0001)
-    
-     while True:
+      while True:
     
       """ Note you can only activate either a postion or velosity controller, cannot use both simutaneously"""
     
-     #activate Joint1 for on screen control and get position and velosity readings
+       #activate Joint1 for on screen control and get position and velosity readings
     
-     joint1_position,joint1_velosity = activate_position_controller(Joint1_PC)
+       joint1_position,joint1_velosity = activate_position_controller(Joint1_PC)
      
-     # comment out the line above and uncomment the below to test the velocity_controller
-     # joint1_position,joint1_velocity = activate_velocity_controller(Joint1_VC)
+       # comment out the line above and uncomment the below to test the velocity_controller
+       # joint1_position,joint1_velocity = activate_velocity_controller(Joint1_VC)
     
-     print(joint1_position,joint1_velocity)
+       print(joint1_position,joint1_velocity)
     
-     pybullet.stepSimulation()
+      pybullet.stepSimulation()
     
-    pybullet.disconnect()
+      pybullet.disconnect()
     
     
 
-
-
-### Run test scripts
-- python bullet_test.py - reference https://alexanderfabisch.github.io/pybullet.html 
-- python test_position_controller.py
-- python test_velocity_controller.py
+### Wrapping Up
+- If you followed along correctly, you should have something like the examples shown below. 
+      - python bullet_test.py - reference https://alexanderfabisch.github.io/pybullet.html 
+      - python test_position_controller.py
+      - python test_velocity_controller.py
 
 <p align="center">
 <img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_position_controller.gif" width="250" height="250"> 
@@ -202,8 +181,12 @@ Now lets test the postion/velocity controllers, by starting a simulation and tes
 
 
 
-#### Snake Robot Model 
-![Exporting URDF file](https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Snakebot.gif?raw=true)
+#### Endless Posibilites
+- Example of a real robot I designed in solidworks moving around in the pybullet enviroment. 
+
+<p align="center">
+<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Snakebot.gif" width="450" height="450"> 
+</p>
 
 
 
