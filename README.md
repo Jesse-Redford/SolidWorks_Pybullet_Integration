@@ -38,7 +38,7 @@ A development guide for building custom robot assemblies in Solidworks, converti
      5. Construct your robot assembly by assign mates to your geometery references for each part .
  
 ### Exporting your Solidworks Assembly as a URDF file.
-- Once you have created your robot parts and joined them in an assemblie file, we need to set up the parameters for the URDF file. Below is an example of what this processes looks like. how I created (Assem_test8 folder)
+- Once you have opended the solidworks assembly file Assem_model.SLDASM, (or created your own robot parts and joined them in an assemblie file), we need to set up the parameters for the URDF file. Below is an example of what this processes looks like. How I created Assem_test8 folder which include the URDF model
 
   1. Select urdf exporter
   2. Define main link 
@@ -48,7 +48,7 @@ A development guide for building custom robot assemblies in Solidworks, converti
   6. Locate your model directory 
 
 <p align="center">
-<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/creating_URDF_file.gif" width="250" height="250"> 
+<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/creating_URDF_file.gif" width="450" height="450"> 
 </p>
 
 ### Importing URDF file into PyBullet Enviroment
