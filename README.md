@@ -1,4 +1,4 @@
-# Solidworks Integration with Pybullet Tutorial
+# Solidworks Integration with Pybullet 
 A development guide for building custom robot assemblies in Solidworks, converting them to URDF, importing to pybullet environment, and setting up position and speed controllers. To get started I recommend downloading the Test_Files folder. This includes a simple solidworks model and the urdf I will be referencing for this tutorial. It is also assumed that you have solidoworks and python installed on your machine. 
 
 ### Topics
