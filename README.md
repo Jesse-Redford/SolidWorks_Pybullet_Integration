@@ -166,7 +166,8 @@ A development guide for building custom robot assemblies in Solidworks, converti
     
 
 ### Wrapping Up
-- If you followed along correctly, you should have something like the examples shown below. 
+- If you followed along correctly, you should have something like the examples shown below.
+
       - python bullet_test.py - reference https://alexanderfabisch.github.io/pybullet.html 
       - python test_position_controller.py
       - python test_velocity_controller.py
