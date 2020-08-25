@@ -10,6 +10,17 @@ A development guide for building custom robot assemblies in Solidworks, converti
 - creating position and speed controlers for robot joints
 
 
+### Example what you will built in this tutortial
+- python bullet_test.py - reference https://alexanderfabisch.github.io/pybullet.html 
+- python test_position_controller.py
+- python test_velocity_controller.py
+
+<p align="center">
+<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_position_controller.gif" width="250" height="250"> 
+<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_velocity_controller.gif" width="250" height="250"> 
+</p>
+
+
 ### Installing PyBullet 
 - pybullet is a simple python interface to the physics engine "Bullet", this allows you to import robots into a simulator and controll them. pybullet can load kinematic descriptions of robots or other objects from URDF files.
 
@@ -52,9 +63,9 @@ A development guide for building custom robot assemblies in Solidworks, converti
   5. Create URDF model
   6. Locate your model directory 
 
-![Exporting URDF file](https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/creating_URDF_file.gif?raw=true)
-
-
+<p align="center">
+<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/creating_URDF_file.gif" width="250" height="250"> 
+</p>
 
 ### Importing URDF file into PyBullet Enviroment
 - To check if your URDF model was created correctly, locate the model in the folder created by the URDF exporter
@@ -177,15 +188,6 @@ Now lets test the postion/velocity controllers, by starting a simulation and tes
     
     
 
-#### Example of exporting URDF file from solidworks assembly, how I created (Assem_test8 folder)
-![Exporting URDF file](https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/creating_URDF_file.gif?raw=true)
-
-
-
-#### Snake Robot Model 
-![Exporting URDF file](https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Snakebot.gif?raw=true)
-
-
 
 
 ### Run test scripts
@@ -193,15 +195,16 @@ Now lets test the postion/velocity controllers, by starting a simulation and tes
 - python test_position_controller.py
 - python test_velocity_controller.py
 
+<p align="center">
+<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_position_controller.gif" width="250" height="250"> 
+<img src="https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_velocity_controller.gif" width="250" height="250"> 
+</p>
 
-### Example of exporting URDF file from solidworks, how I created (Assem_test8 folder)
-![Exporting URDF file](https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/creating_URDF_file.gif?raw=true)
 
-### python test_position_controller.py
-![python test_position_controller.py](https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_position_controller.gif?raw=true)
 
-### python test_velocity_controller.py
-![python test_velocity_controller.py](https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Test_Files/test_velocity_controller.gif?raw=true)
+#### Snake Robot Model 
+![Exporting URDF file](https://github.com/Jesse-Redford/Deep_Robot_Development/blob/master/Snakebot.gif?raw=true)
+
 
 
 
